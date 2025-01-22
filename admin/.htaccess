@@ -1,0 +1,35 @@
+RewriteEngine On
+RewriteBase /admin/
+
+# Redirect root admin route to index.php
+RewriteCond %{REQUEST_URI} ^/admin/?$
+RewriteRule ^$ index.php [L]
+
+# Redirect specific admin section routes
+RewriteRule ^events/?$ events/index.php [L]
+RewriteRule ^donations/?$ donations/index.php [L]
+RewriteRule ^team/?$ team/index.php [L]
+RewriteRule ^partners/?$ partners/index.php [L]
+
+# Protect sensitive directories
+RewriteRule ^(includes|config)/ - [F]
+
+# Redirect all other routes to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L]
+
+# Disable directory listing
+Options -Indexes
+
+# Prevent viewing of .htaccess file
+<Files .htaccess>
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Prevent viewing of configuration files
+<Files ~ "^(config\.php|db\.php)$">
+    Order Allow,Deny
+    Deny from all
+</Files>

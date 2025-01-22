@@ -1,0 +1,108 @@
+/* Admin Panel Design System Variables */
+:root {
+    /* Color Palette */
+    --color-primary: #f59824;        /* Primary Orange */
+    --color-primary-light: #ffc371;  /* Light Orange */
+    --color-primary-dark: #c46b1c;   /* Dark Orange */
+    
+    /* Neutral Colors */
+    --color-background: #f4f6f9;     /* Light Gray Background */
+    --color-background-light: #fff4e6; /* Warm Light Background */
+    --color-text-dark: #34495e;      /* Dark Text */
+    --color-text-muted: #6c757d;     /* Muted Text */
+    
+    /* Sidebar Colors */
+    --color-sidebar-bg: #343a40;     /* Dark Sidebar Background */
+    --color-sidebar-text: rgba(255,255,255,0.8);
+    --color-sidebar-active: #f59824; /* Active Link Color */
+    
+    /* Card Styles */
+    --card-border-radius: 10px;
+    --card-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    /* Transitions */
+    --transition-speed: 0.3s;
+    
+    /* Typography */
+    --font-family-base: 'Inter', 'Arial', sans-serif;
+    
+    /* Spacing */
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+}
+
+/* Responsive Typography */
+html {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+/* Global Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-base);
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+}
+
+/* Utility Classes */
+.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+.text-primary {
+    color: var(--color-primary) !important;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--card-box-shadow);
+    transition: transform var(--transition-speed) ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: var(--color-sidebar-bg);
+    min-height: 100vh;
+    color: white;
+}
+
+.sidebar .nav-link {
+    color: var(--color-sidebar-text);
+    transition: all var(--transition-speed) ease;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: var(--color-sidebar-active);
+    color: white;
+}

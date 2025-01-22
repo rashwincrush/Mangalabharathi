@@ -1,0 +1,52 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+*.log
+logs/
+
+# Database configuration
+database/config.php
+
+# Sensitive information
+.env
+*.env
+
+# Dependency directories
+vendor/
+node_modules/
+
+# Backup files
+*.bak
+*.gho
+*.ori
+*.orig
+*.tmp
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# PHP specific
+.phpunit.result.cache
+
+# Security
+admin/includes/auth.php
+
+# Temporary files
+tmp/
+temp/
+
+# Composer
+composer.phar
+/vendor/
+
+# Exclude system and hidden files
+.Trash/
+.config/
+.ssh/
+.zsh_history

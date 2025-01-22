@@ -1,0 +1,131 @@
+/* Import Design System Variables */
+@import 'variables.css';
+
+/* Admin Dashboard Styles */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --background-light: #f4f6f9;
+    --text-dark: #34495e;
+}
+
+body {
+    background-color: var(--color-background);
+    font-family: var(--font-family-base);
+    color: var(--color-text-dark);
+}
+
+.sidebar {
+    background-color: var(--color-sidebar-bg);
+    min-height: 100vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .nav-link {
+    color: var(--color-sidebar-text);
+    transition: all var(--transition-speed) ease;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: var(--color-sidebar-active);
+    color: white;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.card {
+    border: none;
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--card-box-shadow);
+    margin-bottom: 20px;
+    transition: all var(--transition-speed) ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.table {
+    background-color: white;
+}
+
+.table thead {
+    background-color: var(--background-light);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+.alert {
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        min-height: auto;
+    }
+}
+
+/* Form styles */
+.form-control,
+.form-select {
+    border-radius: 5px;
+    padding: 0.5rem 0.75rem;
+}
+
+/* Action buttons */
+.btn-group .btn {
+    padding: 0.25rem 0.5rem;
+}
+
+/* Dashboard header */
+.main-content .border-bottom {
+    border-bottom: 2px solid var(--background-light) !important;
+}
+
+/* Icons */
+.feather {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+
+    .card {
+        background-color: #1e1e1e;
+        color: #e0e0e0;
+    }
+
+    .table {
+        color: #e0e0e0;
+    }
+}
