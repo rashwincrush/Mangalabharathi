@@ -26,9 +26,9 @@ class Database {
         int $port = 3306
     ) {
         $this->host = $host ?? $_ENV['DB_HOST'] ?? 'localhost';
-        $this->username = $username ?? $_ENV['DB_USERNAME'] ?? 'root';
-        $this->password = $password ?? $_ENV['DB_PASSWORD'] ?? '';
-        $this->database = $database ?? $_ENV['DB_NAME'] ?? 'managalabhrathi';
+        $this->username = $username ?? $_ENV['DB_USERNAME'] ?? 'u274792269_MB2025';
+        $this->password = $password ?? $_ENV['DB_PASSWORD'] ?? '1q2w3e4r';
+        $this->database = $database ?? $_ENV['DB_NAME'] ?? 'u274792269_MB';
         $this->port = $port;
 
         $this->connect();
